@@ -17,23 +17,15 @@ function Dinosaur(species, weight, height, diet, where, when, fact){
 }
 
 // Create Dino Objects
-let dinos = []
 
 grabData().then(data => {
     const dinos = data.Dinos
-    dinos.forEach(element => {
-        const d = new Dinosaur(element.species, element.weight, element.height, element.diet, element.where, element.when, element.fact)
-
-        console.log(d)
-        dinos.push(d)
-    });
+    const dinos_arr = dinos.map(element => {
+        return new Dinosaur(element.species, element.weight, element.height, element.diet, element.where, element.when, element.fact)
+    })
+    
+    console.log(dinos_arr)
 });
-
-setTimeout(() => {
-    console.log(dinos)
-}, 2000);
-
-
 
 
 // Create Human Object

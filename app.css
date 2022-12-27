@@ -49,6 +49,7 @@ p {
     position: relative;
     box-sizing: border-box;
     width: 100%;
+    flex: 0 0 33.333333%;
 }
 
 .grid-item:nth-child(1){
@@ -96,6 +97,9 @@ p {
 .grid-item h3 {
     font-size: 2em;
     color: #eee;
+    position: absolute;
+    width: 100%;
+    top: 0px;
 }
 
 .grid-item img {
